@@ -1,0 +1,73 @@
+﻿<html>
+<head>
+
+<script>
+var ans = new Array;
+var done = new Array;
+var score = 0;
+ans[1] = "b";
+ans[2] = "b";
+ans[3] = "c";
+ans[4] = "a";
+	
+function Engine(question, answer){
+
+if (answer != ans[question]) {
+
+	if (!done[question]){
+
+		done[question] = -1;
+	}
+	else {
+		alert("Нельзя два раза");
+	}
+}
+else{
+	if (!done[question]) {
+
+		done[question] = -1;
+		score++;
+	}
+	else {
+		alert("Два раза нельзя");
+	}
+}
+
+}
+
+function Result(){
+	alert("Ваш счет" + score);
+
+}
+</script>
+
+</head> 
+
+<body>
+
+<div class="TestBox">
+
+<form> <p>
+<b>1.Структура компьютера — это:</b></p><br>
+<input type=radio value="a" onClick="Engine(1, this.value)"> комплекс электронных устройств, осуществляющих обработку информации<br>
+<input type=radio value="b" onClick="Engine(1, this.value)"> некоторая модель, устанавливающая состав, порядок и принципы взаимодействия входящих в нее компонентов<br>
+<input type=radio value="c" onClick="Engine(1, this.value)"> комплекс программных и аппаратных средств<br><br>
+<b>2.Разрядность микропроцессора — это: </b><br>
+<input type=radio value="a" onClick="Engine(2, this.value)"> наибольшая единица информации<br>
+<input type=radio value="b" onClick="Engine(2, this.value)"> количество битов, которое воспринимается микропроцессором как единое целое<br>
+<input type=radio value="c" onClick="Engine(2, this.value)"> наименьшая единица информации<br><br>
+<b>3.От разрядности микропроцессора зависит: </b><br>
+<input type=radio value="a" onClick="Engine(3, this.value)"> количество используемых внешних устройств<br>
+<input type=radio value="b" onClick="Engine(3, this.value)"> возможность подключения к сети<br>
+<input type=radio value="c" onClick="Engine(3, this.value)"> максимальный объем внутренней памяти и производительность компьютера<br><br>
+<b>4.Тактовая частота микропроцессора измеряется в: </b><br>
+<input type=radio value="a" onClick="Engine(4, this.value)"> мегагерцах<br>
+<input type=radio value="b" onClick="Engine(4, this.value)"> кодах таблицы символов<br>
+<input type=radio value="c" onClick="Engine(4, this.value)"> байтах и битах<br><br>
+<input type="button" onClick="Rezult()" value="Результат">
+
+</form>	
+</div>
+
+</body>
+ </html>
